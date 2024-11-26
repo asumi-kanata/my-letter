@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>《致你》</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+            /* 添加一些基本的样式来实现图片和文字的居中 */
+            .image-container {
+                text-align: center; /* 使容器内的内容水平居中 */
+                margin-top: 20px; /* 添加一些顶部间距（可选） */
+            }
+            .image-container img {
+                max-width: 100%; /* 确保图片不会超出其容器的宽度 */
+                height: auto; /* 保持图片的纵横比 */
+            }
+            .caption {
+                margin-top: 10px; /* 添加图片和文字之间的间距（可选） */
+            }
+        </style>
+</head>
+<body>
+    <div class="letter-container">
+        <div class="letter">
+            <!-- 在这里添加你的长信内容 -->
+            <p class="line">
+                
+                
+                             
+                第1行内容...
+
+
+                
+                
+                
+                
+                </p>
+                
+            
+            
+                <div class="video-container">
+                    <video id="videoPlayer" width="800" height="600" controls>
+                        <source src="movie_cut.mp4" type="video/mp4">
+                        您的浏览器不支持HTML5视频。
+                    </video>
+                    <div class="video-text">                                                                   
+                        
+                        “你们明明什么都不知道，却装作知道的样子”</div>
+                </div>
+                <!-- 如果第二个视频仍然需要，可以将其放在这里，但请确保更改ID或移除ID并使用类 -->
+                    <video id="anotherVideoPlayer" width="1200" height="800" controls>
+                    <source src="grand escape.mp4" type="video/mp4">
+                    您的浏览器不支持HTML5视频。
+                    </video> -->
+            <p class="line">第二行内容...</p>
+            <!-- 继续添加更多行 -->
+                        <!-- 图片和文字容器 -->
+                        <div class="image-container">
+                                <img src="erweima01.jpg" alt="01">
+                                <div class="caption">这里是图片下方的文字1</div>
+                                <img src="erweima02.jpg" alt="02">
+                                <div class="caption">这里是图片下方的文字2</div>
+                            </div>
+                 
+             <!-- 继续添加更多行 -->
+            <p class="line">第三行内容...</p>
+            <!-- 其他内容... -->
+            
+            
+        </div>
+    </div>
+
+    <div class="music-player" id="musicPlayer">
+        <div class="player-controls">
+            <button id="prevBtn">上一首</button>
+            <button id="playPauseBtn">播放/暂停</button>
+            <button id="nextBtn">下一首</button>
+        </div>
+        <div class="song-info">
+            <span id="songTitle"></span>
+            <progress id="progressBar" value="0" max="1"></progress>
+        </div>
+        <ul id="playlist"></ul>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

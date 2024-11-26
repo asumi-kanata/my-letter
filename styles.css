@@ -1,0 +1,105 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+.letter-container {
+    background: url('your-background-image.jpg') no-repeat center center scroll;
+    /* 或者分开写：
+    background-image: url('your-background-image.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    */
+    background-size:contain;
+    height: 260vh;
+    overflow-y: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+.letter {
+    /* 去掉淡黄色背景 */
+    background: transparent;
+    text-align: left; 
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin: auto;
+    /* 使用手写行楷字体，确保该字体在你的系统上可用或者通过@font-face加载 */
+    font-family: '行楷', 'Cursive', 'Comic Sans MS', sans-serif; /* '行楷' 是手写行楷字体的一个例子，根据实际情况替换 */
+    line-height: 1.5;
+    font-size: 1.7em; /* 稍微增大字体，1em等于父元素的字体大小 */
+}
+.letter p {
+    text-indent: 1em; /* 2em通常等于两个全角空格的宽度 */
+}
+.line {
+    white-space: pre-wrap; /* 保持空格和换行 */
+}
+
+.music-player {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 300px;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.music-player:hover {
+    opacity: 1;
+}
+
+.player-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.song-info {
+    margin-bottom: 10px;
+}
+
+#playlist {
+    list-style: none;
+    padding: 0;
+}
+
+#playlist li {
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+#playlist li:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+.video-container {
+    position: relative;
+    display: inline-block;
+}
+
+.video-text {
+    position: absolute;
+    top: 10%;
+    right: 10px; /* 根据需要调整距离，确保不覆盖视频内容 */
+    transform: translateY(-50%); /* 垂直居中 */
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* 半透明背景 */
+    color: white;
+    border-radius: 5px;
+    font-size: 1em; /* 根据需要调整字体大小 */
+    /* 添加以下属性以确保文本不会超出视频容器的范围 */
+    
+    max-width: calc(100% - 320px); /* 根据视频宽度和视频容器内的其他元素调整 */
+}
